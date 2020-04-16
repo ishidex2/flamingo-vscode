@@ -2,7 +2,7 @@
     "name": "flamingo",
     "displayName": "flamingo",
     "description": "Flamingo language support",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "ishidex2",
     "repository": {
         "url": "https://github.com/ishidex2/flamingo-vscode"
