@@ -36,7 +36,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.flamingo",
-				"match": "\\b(if|while|for|fn|use)\\b"
+				"match": "\\b(if|fn|use)\\b"
 			}]
 		},
 		"opfunction": {
