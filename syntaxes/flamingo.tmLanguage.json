@@ -1,0 +1,60 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Flamingo",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#btype"
+		},
+		{
+			"include": "#opfunction"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#function"
+		}
+	],
+	"repository": {
+		"number": {
+			"match": "((0x|0b)[0-9a-fA-F]+|[0-9.]+|[0-9]+)",
+			"name": "constant.numeric"
+		},
+		"function": {
+			"match": "(?<=(\\(|\\[))[^\\)\\]\\s]+",
+			"name": "entity.name.function.flamingo"
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.flamingo",
+				"match": "\\b(if|while|for|fn|use)\\b"
+			}]
+		},
+		"opfunction": {
+			"match": "(?<=(\\(|\\[))(\\+|\\-|\\*|\\/|\\/\\/|\\%|\\^|\\&|\\||\\~|\\<|\\<\\=|\\>|\\>\\=|\\=\\=|\\!\\=|\\=|\\$)\\s",
+			"name": "variable.flamingo"
+		},
+		"comment": {
+			"match": "\\#.*",
+			"name": "comment.flamingo"
+		},
+		"btype": {
+			"match": "\\b(true|false|null)\\b",
+			"name": "storage.type.flamingo"
+		},
+		"strings": {
+			"name": "string.quoted.double.flamingo",
+			"match": "[\\'\\\"][^\\'\\\"]+[\\\"\\']"
+		}
+	},
+	"scopeName": "main.fl"
+}

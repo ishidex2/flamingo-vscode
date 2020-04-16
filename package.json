@@ -1,0 +1,36 @@
+{
+    "name": "flamingo",
+    "displayName": "flamingo",
+    "description": "Flamingo language support",
+    "version": "0.0.2",
+    "publisher": "ishidex2",
+    "repository": {"url": "https://github.com/ishidex2/flamingo-vscode"},
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "flamingo",
+                "aliases": [
+                    "Flamingo",
+                    "flamingo"
+                ],
+                "extensions": [
+                    ".fl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "flamingo",
+                "scopeName": "main.fl",
+                "path": "./syntaxes/flamingo.tmLanguage.json"
+            }
+        ]
+    }
+}
